@@ -35,10 +35,53 @@ dependencies {
 
 
     providedCompile 'javax:javaee-web-api:7.0'
-    compile files( 'libs/mysql-connector-java:8.0.20.jar')
+    // compile files( 'libs/mysql-connector-java:8.0.20.jar')
     compile fileTree(dir: 'libs', include: '*.jar')
 }
+
 //文字化け対策
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
+
+
+task hello {
+	println("HELLO World!");
+}
+
+// task hello {
+// 	doLast {
+// 		def total = 0;
+// 		for(def i in 1..num.toInteger()){
+// 			total += i;
+// 		}
+// 		println("total:" + total);
+// 	}
+// }
+
+// def arr = ["one","two","three","four","five"];
+// arr.each {s ->
+// 	task "$s" {
+// 		doLast {
+// 			println("this is $s task.");
+// 		}
+// 	}
+// }
+
+// task doit(dependsOn:[compileJava, jar]) {
+// 	doLast {
+// 		// println("*** do it! ***")
+// 		println "*** compile now! ***"
+//         // tasks.compileJava.execute()
+//         tasks.compileJava
+// 		println "*** create jar! ***"
+//         // tasks.jar.execute()
+//         tasks.jar
+// 	}
+// }
+
+// task doit(dependsOn:[jar, run]) {
+// 	doLast {
+// 		println("*** do it! ***")
+// 	}
+// }
