@@ -15,7 +15,7 @@ plugins {
     id 'eclipse-wtp'
 }
 
-// mainClassName = "practice_fw.HelloWorldServlet"
+mainClassName = "practice_fw.HelloWorldServlet"
 
 repositories {
     // Use jcenter for resolving dependencies.
@@ -35,8 +35,8 @@ dependencies {
 
 
     providedCompile 'javax:javaee-web-api:7.0'
-    // compile files( 'libs/mysql-connector-java:8.0.20.jar')
-    compile fileTree(dir: 'libs', include: '*.jar')
+    // compile files( 'lib/mysql-connector-java:8.0.20.jar')
+    compile fileTree(dir: 'lib', include: '*.jar')
 }
 
 //文字化け対策
