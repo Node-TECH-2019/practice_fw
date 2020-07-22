@@ -34,8 +34,14 @@ dependencies {
     providedCompile 'javax:javaee-web-api:7.0'
     // compile files( 'lib/mysql-connector-java:8.0.20.jar')
     compile fileTree(dir: 'lib', include: '*.jar')
-    compile 'org.springframework:spring-web:5.2.7.RELEASE'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.20'
+    // compile 'org.springframework:spring-web:5.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '5.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.2.7.RELEASE'
     compile group: 'org.springframework', name: 'spring-context', version: '5.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: '5.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '5.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-oxm', version: '5.2.7.RELEASE'
 }
 
 //文字化け対策
